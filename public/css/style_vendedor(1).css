@@ -1,0 +1,149 @@
+/*Perfil de vendedor*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #000000;
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+    color: #fff;
+}
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: 
+    #000000;
+    padding: 10px;
+}
+.logo h1 {
+    color: white;
+    margin: 0;
+}
+nav {
+    margin-left: auto;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+nav ul li {
+    position: relative;
+}
+nav ul li a {
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+}
+nav ul li a:hover {
+    background-color: #555;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    min-width: 200px;
+    z-index: 1000;
+}
+.submenu li {
+    display: block;
+}
+.submenu li a {
+    padding: 10px;
+}
+nav ul li:hover .submenu {
+    display: block;
+}
+
+.intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 0;
+    background: #f1f1f1;
+    height: 800;    
+}
+
+
+.intro-content {
+    width: 40%;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-left: 5%;
+    height: 600px;
+    background-color: #390202;
+    color: #fff;
+}
+
+.intro-content h2 {
+    margin-top: 0;
+    font-size: 32px;
+}
+
+.intro-content p {
+    margin: 10px 0;
+}
+
+.social-icons a {
+    margin: 0 5px;
+}
+
+.slider {
+    width: 50%;
+    position: relative;
+}
+
+.slider-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-right: 30px;
+    
+}
+
+.slider-content img {
+    width: 100%;
+    border-radius: 10px;
+    
+}
+
+.slider-content .prev, .slider-content .next {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 1;
+}
+
+.slider-content .prev {
+    left: 10px;
+}
+
+.slider-content .next {
+    right: 10px;
+}
+
+.fondo{
+
+    width: 700px;
+    height: 900px;
+}

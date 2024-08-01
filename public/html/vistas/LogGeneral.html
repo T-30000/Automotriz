@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial de cambios</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        .modal {
+            display: none;
+            /* Hidden by default */
+            position: fixed;
+            /* Stay in place */
+            z-index: 50;
+            /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            height: 100%;
+            /* Full height */
+            overflow: auto;
+            /* Enable scroll if needed */
+            background-color: rgba(0, 0, 0, 0.5);
+            /* Black with opacity */
+            padding-top: 60px;
+        }
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            /* 15% from the top and centered */
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            /* Could be more or less, depending on screen size */
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>DREAMART</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Gestión de Personal</a>
+                        <ul class="submenu">
+
+                            <li><a href="../Vistas/login_con_des.html">Contratar</a></li>
+                            <li><a href="../Vistas/login_despedir.html">Despedir</a></li>
+                            <li><a href="../Vistas/ver_personal.html">Ver personal</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Ventas</a>
+                        <ul class="submenu">
+                            <li><a href="../Vistas/registrar_venta.html">Registrar Venta</a></li>
+                            <li><a href="../Vistas/hiatorial_venta.html">Historial de Ventas</a></li>
+                            <li><a href="../Vistas/reporte_ventas.html">Reporte de Ventas</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Inventario</a>
+                        <ul class="submenu">
+                            <li><a href="../Vistas/ver_inventario.html">Ver Inventario</a></li>
+                            <li><a href="../Vistas/reporte_inventario.html">Reporte de Inventario</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Recompensas</a>
+                        <ul class="submenu">
+                            <li><a href="#">Ver Recompensas</a></li>
+                            <li><a href="../Vistas/login_con_des.html">Asignar Recompensas</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Visualizaciones</a>
+                        <ul class="submenu">
+                            <li><a href="../Vistas/grafica.html">Gráficos</a></li>
+                            <li><a href="../Vistas/informes.html">Informes</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="contact">Configuración</a>
+                        <ul class="submenu">
+                            <li><a href="../Vistas/inicio_sesion.html">Cerrar Sesión</a></li>
+                            <li><a href="#">Preferencias</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <div class="overlay-container">
+        <img src="../img/auto2.png" alt="Background Image" class="w-full h-screen object-cover">
+        <div class="centered-text">
+            <h1 class="text-6xl font-bold">HISTORIAL DE VENTAS</h1>
+            <p class="text-2xl mt-4">Aquí estarán la lista de los autos vendidos recientemente.</p>
+
+
+        </div>
+    </div><br><br>
+
+    <h1 class="text-4xl font-bold text-center mt-10">LISTA DE VEHÍCULOS VENDIDOS</h1><br><br>
+
+    <!-- Cards Grid -->
+    <article class="grid grid-cols-1 md:grid-cols-3 gap-4 ml-5">
+        <!-- Primera card -->
+        <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+            <img class="w-full" src="https://via.placeholder.com/400x200?text=Honda+Accord" alt="Card image">
+            <div class="px-6 py-4">
+                <div class="font-bold text-xl mb-2">Modelo: Accord</div>
+                <p class="text-gray-700 text-base">
+                    Marca: Honda <br>
+                    Matrícula: ABC123 <br>
+                    Año: 2021 <br>
+                    Vendido por: Juan Pérez
+                </p>
+            </div>
+            <div class="px-6 pt-4 pb-2">
+                <span
+                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Honda</span>
+                <span
+                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#2021</span>
+            </div>
+            <div class="px-6 pt-4 pb-2">
+                <button class="learn-more bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+                    onclick="openModal('modal1')">VER MÁS</button>
+            </div>
+        </div>
+
+        <!-- Segunda card -->
+        <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+            <img class="w-full" src="https://via.placeholder.com/400x200?text=Toyota+Camry" alt="Card image">
+            <div class="px-6 py-4">
+                <div class="font-bold text-xl mb-2">Modelo: Camry</div>
+                <p class="text-gray-700 text-base">
+                    Marca: Toyota <br>
+                    Matrícula: XYZ456 <br>
+                    Año: 2020 <br>
+                    Vendido por: María Gómez
+                </p>
+            </div>
+            <div class="px-6 pt-4 pb-2">
+                <span
+                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Toyota</span>
+                <span
+                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#2020</span>
+            </div>
+            <div class="px-6 pt-4 pb-2">
+                <button class="learn-more bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+                    onclick="openModal('modal2')">VER MÁS</button>
+            </div>
+        </div>
+
+        <!-- Tercera card -->
+        <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+            <img class="w-full" src="https://via.placeholder.com/400x200?text=Ford+Mustang" alt="Card image">
+            <div class="px-6 py-4">
+                <div class="font-bold text-xl mb-2">Modelo: Mustang</div>
+                <p class="text-gray-700 text-base">
+                    Marca: Ford <br>
+                    Matrícula: LMN789 <br>
+                    Año: 2019 <br>
+                    Vendido por: Carlos López
+                </p>
+            </div>
+            <div class="px-6 pt-4 pb-2">
+                <span
+                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Ford</span>
+                <span
+                    class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#2019</span>
+            </div>
+            <div class="px-6 pt-4 pb-2">
+                <button class="learn-more bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+                    onclick="openModal('modal3')">VER MÁS</button>
+            </div>
+        </div>
+    </article>
+
+    <!-- Modals -->
+    <div id="modal1" class="modal">
+        <div class="modal-content max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-lg">
+            <span class="close float-right text-gray-700 cursor-pointer" onclick="closeModal('modal1')">&times;</span>
+            <h2 class="text-2xl font-bold mb-4">Detalles de la Venta</h2>
+            <p><strong>Nombre del Comprador:</strong> Carlos García</p>
+            <p><strong>Fecha de Compra:</strong> 15/06/2021</p>
+            <p><strong>Precio de Venta:</strong> $20,000</p>
+            <p><strong>Dirección del Comprador:</strong> Calle Falsa 123, Ciudad, País</p>
+            <p><strong>Teléfono del Comprador:</strong> 123-456-7890</p>
+        </div>
+    </div>
+
+    <div id="modal2" class="modal">
+        <div class="modal-content max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-lg">
+            <span class="close float-right text-gray-700 cursor-pointer" onclick="closeModal('modal2')">&times;</span>
+            <h2 class="text-2xl font-bold mb-4">Detalles de la Venta</h2>
+            <p><strong>Nombre del Comprador:</strong> Ana Martínez</p>
+            <p><strong>Fecha de Compra:</strong> 20/07/2020</p>
+            <p><strong>Precio de Venta:</strong> $18,000</p>
+            <p><strong>Dirección del Comprador:</strong> Avenida Siempre Viva 742, Ciudad, País</p>
+            <p><strong>Teléfono del Comprador:</strong> 987-654-3210</p>
+        </div>
+    </div>
+
+    <div id="modal3" class="modal">
+        <div class="modal-content max-w-2xl mx-auto p-6 bg-white rounded-lg shadow-lg">
+            <span class="close float-right text-gray-700 cursor-pointer" onclick="closeModal('modal3')">&times;</span>
+            <h2 class="text-2xl font-bold mb-4">Detalles de la Venta</h2>
+            <p><strong>Nombre del Comprador:</strong> José Rodríguez</p>
+            <p><strong>Fecha de Compra:</strong> 05/08/2019</p>
+            <p><strong>Precio de Venta:</strong> $25,000</p>
+            <p><strong>Dirección del Comprador:</strong> Calle Inventada 456, Ciudad, País</p>
+            <p><strong>Teléfono del Comprador:</strong> 321-654-9870</p>
+        </div>
+    </div>
+
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'block';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Horizontal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../css/style.css">
+</head>
+
+<body>
+
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>DREAMART</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Gestión de Personal</a>
+                        <ul class="submenu">
+
+                            <li><a href="../Vistas/login_con_des.html">Contratar</a></li>
+                            <li><a href="../Vistas/login_despedir.html">Despedir</a></li>
+                            <li><a href="../Vistas/ver_personal.html">Ver personal</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Ventas</a>
+                        <ul class="submenu">
+                            <li><a href="../Vistas/registrar_venta.html">Registrar Venta</a></li>
+                            <li><a href="../Vistas/hiatorial_venta.html">Historial de Ventas</a></li>
+                            <li><a href="../Vistas/reporte_ventas.html">Reporte de Ventas</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Inventario</a>
+                        <ul class="submenu">
+                            <li><a href="../Vistas/ver_inventario.html">Ver Inventario</a></li>
+                            <li><a href="../Vistas/reporte_inventario.html">Reporte de Inventario</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Recompensas</a>
+                        <ul class="submenu">
+                            <li><a href="#">Ver Recompensas</a></li>
+                            <li><a href="../Vistas/login_con_des.html">Asignar Recompensas</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Visualizaciones</a>
+                        <ul class="submenu">
+                            <li><a href="../Vistas/grafica.html">Gráficos</a></li>
+                            <li><a href="../Vistas/informes.html">Informes</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="contact">Configuración</a>
+                        <ul class="submenu">
+                            <li><a href="../Vistas/inicio_sesion.html">Cerrar Sesión</a></li>
+                            <li><a href="#">Preferencias</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="intro">
+
+            <div class="intro-content ">
+                <h2>WHERE IDEAS MEET SKILLS</h2>
+                <p>Purus non enim praesent elementum facilisis leo vel fringilla est. Ut sem nulla pharetra diam sit
+                    amet.</p>
+                <p>Ut porttitor leo a diam. Diam donec adipiscing tristique risus nec. In dictum non consectetur a erat.
+                </p>
+                <div class="social-icons">
+                    <a href="#" class="learn-more">LEARN MORE</a>
+                </div>
+            </div>
+
+            <div class="slider">
+
+                <div class="slider-content">
+                    <button class="prev">&lt;</button>
+                    <video class="fondo" src="../img/video2.mp4" autoplay loop muted></video>
+                    <button class="next">&gt;</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <article class="cards">
+
+        <!--Primera card-->
+
+        <article class="grid grid-cols-1 md:grid-cols-3 gap-4 ml-5">
+
+            <!--Primera card-->
+            <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+                <img class="w-full" src="../img/graficos.png" alt="Card image">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">Grafica ventas</div>
+                    <p class="text-gray-700 text-base">
+                        Here is some content for the card. It can be a description or any other content.
+                    </p>
+                </div>
+                <div class="px-6 pt-4 pb-2">
+                    <span
+                        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#tag1</span>
+                    <span
+                        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#tag2</span>
+                    <span
+                        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#tag3</span>
+                </div>
+
+                <!--Boton para la pestaña-->
+                <div class="social-icons">
+                    <a href="../Vistas/grafica.html" class="learn-more">Ver más</a>
+                </div>
+            </div>
+
+            <!--Segunda card-->
+            <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+                <img class="w-full" src="../img/historial.png" alt="Card image">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">Historial de ventas</div>
+                    <p class="text-gray-700 text-base">
+                        Here is some content for the card. It can be a description or any other content.
+                    </p>
+                </div>
+                <div class="px-6 pt-4 pb-2">
+                    <span
+                        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#tag1</span>
+                    <span
+                        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#tag2</span>
+                    <span
+                        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#tag3</span>
+                </div>
+
+                <!--Boton para la pestaña-->
+                <div class="social-icons">
+                    <a href="../Vistas/hiatorial_venta.html" class="learn-more"> Ver más</a>
+                </div>
+            </div>
+
+
+            <!--Tercera card-->
+            <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+                <img class="w-full" src="../img/reporte_ventas.png" alt="Card image">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">Reporte de ventas</div>
+                    <p class="text-gray-700 text-base">
+                        Here is some content for the card. It can be a description or any other content.
+                    </p>
+                </div>
+                <div class="px-6 pt-4 pb-2">
+                    <span
+                        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#tag1</span>
+                    <span
+                        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#tag2</span>
+                    <span
+                        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#tag3</span>
+                </div>
+
+                <!--Boton para la pestaña-->
+                <div class="social-icons">
+                    <a href="../Vistas/reporte_ventas.html" class="learn-more">Ver más</a>
+                </div>
+            </div>
+
+
+            <!--Cuarta card-->
+            <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+                <img class="w-full" src="../img/informes.png" alt="Card image">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">Informes</div>
+                    <p class="text-gray-700 text-base">
+                        Here is some content for the card. It can be a description or any other content.
+                    </p>
+                </div>
+                <div class="px-6 pt-4 pb-2">
+                    <span
+                        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#tag1</span>
+                    <span
+                        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#tag2</span>
+                    <span
+                        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#tag3</span>
+                </div>
+
+                <!--Boton para la pestaña-->
+                <div class="social-icons">
+                    <a href="../Vistas/informes.html" class="learn-more">Ver más</a>
+                </div>
+            </div>
+
+
+            <!--Quinta card-->
+            <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+                <img class="w-full" src="../img/ver_empleados.png" alt="Card image">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">Ver personal</div>
+                    <p class="text-gray-700 text-base">
+                        Here is some content for the card. It can be a description or any other content.
+                    </p>
+                </div>
+                <div class="px-6 pt-4 pb-2">
+                    <span
+                        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#tag1</span>
+                    <span
+                        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#tag2</span>
+                    <span
+                        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#tag3</span>
+                </div>
+
+                <!--Boton para la pestaña-->
+                <div class="social-icons">
+                    <a href="../Vistas/ver_personal.html" class="learn-more">Ver más</a>
+                </div>
+            </div>
+
+
+            <!--Sexta card-->
+            <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+                <img class="w-full" src="../img/contratar_personal.png" alt="Card image">
+                <div class="px-6 py-4">
+                    <div class="font-bold text-xl mb-2">Contratar personal</div>
+                    <p class="text-gray-700 text-base">
+                        Here is some content for the card. It can be a description or any other content.
+                    </p>
+                </div>
+                <div class="px-6 pt-4 pb-2">
+                    <span
+                        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#tag1</span>
+                    <span
+                        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#tag2</span>
+                    <span
+                        class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#tag3</span>
+                </div>
+
+                <!--Boton para la pestaña-->
+                <div class="social-icons">
+                    <a href="../Vistas/login_con_des.html" class="learn-more">Ver más</a>
+                </div>
+            </div>
+
+
+
+        </article>
+
+
+    </article>
+
+
+    <script src="../js/incorporacion.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-gray-100">
+
+    <header class="bg-black shadow-md">
+        <div class="container mx-auto p-4">
+            <div class="flex justify-between items-center">
+                <div class="logo">
+                    <h1 class="text-4xl font-extrabold text-white">DREAMART</h1>
+                </div>
+                <nav>
+                    <ul class="flex space-x-4">
+                        <li><a href="miperfil.html" class="text-xl font-bold text-white">Mi Perfil</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 mt-4">
+        <h2 class="text-2xl font-bold mb-4">Dashboard de Ventas</h2>
+
+        <!-- Contenedor para los gráficos -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-white shadow-md rounded-lg p-4">
+                <h3 class="text-xl font-bold mb-4">Ventas Totales por Producto</h3>
+                <canvas id="barChart"></canvas>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-4">
+                <h3 class="text-xl font-bold mb-4">Ventas Totales por Fecha</h3>
+                <canvas id="lineChart"></canvas>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Ejemplo de datos de historial de ventas (estos datos se deben obtener de una base de datos)
+        const salesHistory = [
+            { id: 1, product: 'KIA 2020', date: '2024-07-25', quantity: 1, total: 20000 },
+            { id: 2, product: 'Camaro 2019', date: '2024-07-26', quantity: 2, total: 45000 },
+            { id: 3, product: 'Mustang 2024', date: '2024-07-27', quantity: 1, total: 30000 },
+            { id: 4, product: 'Nissan Onix', date: '2024-07-28', quantity: 3, total: 60000 }
+        ];
+
+        // Extraer datos para el gráfico de barras (Ventas Totales por Producto)
+        const products = salesHistory.map(sale => sale.product);
+        const totals = salesHistory.map(sale => sale.total);
+
+        // Extraer datos para el gráfico de líneas (Ventas Totales por Fecha)
+        const dates = salesHistory.map(sale => sale.date);
+        const dailyTotals = salesHistory.reduce((acc, sale) => {
+            if (!acc[sale.date]) {
+                acc[sale.date] = 0;
+            }
+            acc[sale.date] += sale.total;
+            return acc;
+        }, {});
+        const totalSalesByDate = Object.values(dailyTotals);
+
+        // Crear gráfico de barras
+        const barCtx = document.getElementById('barChart').getContext('2d');
+        const barChart = new Chart(barCtx, {
+            type: 'bar',
+            data: {
+                labels: products,
+                datasets: [{
+                    label: 'Total Ventas',
+                    data: totals,
+                    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                    borderColor: 'rgba(54, 162, 235, 1)',
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+
+        // Crear gráfico de líneas
+        const lineCtx = document.getElementById('lineChart').getContext('2d');
+        const lineChart = new Chart(lineCtx, {
+            type: 'line',
+            data: {
+                labels: dates,
+                datasets: [{
+                    label: 'Total Ventas',
+                    data: totalSalesByDate,
+                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 1,
+                    fill: false
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>

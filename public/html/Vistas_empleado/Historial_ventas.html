@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historial de Ventas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+    <header class="bg-black shadow-md">
+        <div class="container mx-auto p-4">
+            <div class="flex justify-between items-center">
+                <div class="logo">
+                    <h1 class="text-4xl font-extrabold text-white">DREAMART</h1>
+                </div>
+                <nav>
+                    <ul class="flex space-x-4">
+                        <li><a href="dash_board_venta.html" class="text-xl font-bold text-white">Dashboard</a></li>
+                        <li><a href="miperfil.html" class="text-xl font-bold text-white">Mi Perfil</a></li>
+                        <li><a href="logout.php" class="text-xl font-bold text-white">Cerrar Sesión</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto p-4 mt-4">
+        <a href="Vendedor.html" class="text-blue-500 hover:underline mb-4 block">&larr; Volver</a>
+        <h2 class="text-2xl font-bold mb-4">Historial de Ventas</h2>
+        <div class="bg-white shadow-md rounded-lg p-4">
+            <table class="min-w-full table-auto">
+                <thead class="bg-gray-200">
+                    <tr>
+                        <th class="px-4 py-2">ID Venta</th>
+                        <th class="px-4 py-2">Producto</th>
+                        <th class="px-4 py-2">Fecha</th>
+                        <th class="px-4 py-2">Cantidad</th>
+                        <th class="px-4 py-2">Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Aquí se insertarán las filas con los datos del historial de ventas -->
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <script>
+        // Ejemplo de datos de historial de ventas (estos datos se deben obtener de una base de datos)
+        const salesHistory = [
+            { id: 1, product: 'KIA 2020', date: '2024-07-25', quantity: 1, total: 20000 },
+            { id: 2, product: 'Camaro 2019', date: '2024-07-26', quantity: 2, total: 45000 },
+            { id: 3, product: 'Mustang 2024', date: '2024-07-27', quantity: 1, total: 30000 },
+            { id: 4, product: 'Nissan Onix', date: '2024-07-28', quantity: 3, total: 60000 }
+        ];
+
+        // Función para cargar el historial de ventas en la tabla
+        function loadSalesHistory() {
+            const tbody = document.querySelector('table tbody');
+            salesHistory.forEach(sale => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td class="border px-4 py-2">${sale.id}</td>
+                    <td class="border px-4 py-2">${sale.product}</td>
+                    <td class="border px-4 py-2">${sale.date}</td>
+                    <td class="border px-4 py-2">${sale.quantity}</td>
+                    <td class="border px-4 py-2">${sale.total}</td>
+                `;
+                tbody.appendChild(row);
+            });
+        }
+
+        // Cargar el historial de ventas al cargar la página
+        document.addEventListener('DOMContentLoaded', loadSalesHistory);
+    </script>
+
+</body>
+</html>
