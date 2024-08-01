@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario de Vehículos</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="../../css/style.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+        <div class="logo">
+            <h1>DREAMART</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Gestión de Personal</a>
+                    <ul class="submenu">
+                  
+                        <li><a href="../Vistas/login_con_des.html">Contratar</a></li>
+                        <li><a href="../Vistas/login_despedir.html">Despedir</a></li>
+                        <li><a href="../Vistas/ver_personal.html">Ver personal</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Ventas</a>
+                    <ul class="submenu">
+                        <li><a href="../Vistas/registrar_venta.html">Registrar Venta</a></li>
+                        <li><a href="../Vistas/hiatorial_venta.html">Historial de Ventas</a></li>
+                        <li><a href="../Vistas/reporte_ventas.html">Reporte de Ventas</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Inventario</a>
+                    <ul class="submenu">
+                        <li><a href="../Vistas/ver_inventario.html">Ver Inventario</a></li>
+                        <li><a href="../Vistas/reporte_inventario.html">Reporte de Inventario</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Recompensas</a>
+                    <ul class="submenu">
+                        <li><a href="#">Ver Recompensas</a></li>
+                        <li><a href="../Vistas/login_con_des.html">Asignar Recompensas</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Visualizaciones</a>
+                    <ul class="submenu">
+                        <li><a href="../Vistas/grafica.html">Gráficos</a></li>
+                        <li><a href="../Vistas/informes.html">Informes</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="contact">Configuración</a>
+                    <ul class="submenu">
+                        <li><a href="../Vistas/inicio_sesion.html">Cerrar Sesión</a></li>
+                        <li><a href="#">Preferencias</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+  <div class="overlay-container">
+    <img src="../img/auto2.png" alt="Background Image" class="w-full h-screen object-cover">
+    <div class="centered-text">
+        <h1 class="text-6xl font-bold">INVENTARIO VEHICULAR</h1>
+        <p class="text-2xl mt-4">Aquí estarán la lista de los autos existentes en la agencia.</p>
+        
+    </div>
+</div>
+
+
+    <h1 class="h1">LISTA DE VEHICULOS</h1>
+    <div class="botonesIn">
+
+    <button id="addCarBtn" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Agregar Coche</button>
+    <button id="modifyCarBtn" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">Modificar Coche</button>
+    <button id="deleteCarBtn" class="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Eliminar Coche</button>
+
+    </div>
+    <!--Primera card-->
+
+    <article class="grid grid-cols-1 md:grid-cols-3 gap-4 ml-5">
+
+      <!--Primera card-->
+      <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+        <img class="w-full" src="https://via.placeholder.com/400x200" alt="Card image">
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">Contratos de personal</div>
+          <p class="text-gray-700 text-base">
+            Here is some content for the card. It can be a description or any other content.
+          </p>
+        </div>
+        <div class="px-6 pt-4 pb-2">
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#tag1</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#tag2</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#tag3</span>
+        </div>
+
+       <!--Boton para la pestaña-->
+        <div class="social-icons">
+          <a href="#" class="learn-more">LEARN MORE</a>
+      </div>
+      </div>
+  
+      <!--Segunda card-->
+      <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+          <img class="w-full" src="https://via.placeholder.com/400x200" alt="Card image">
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">Card Title</div>
+            <p class="text-gray-700 text-base">
+              Here is some content for the card. It can be a description or any other content.
+            </p>
+          </div>
+          <div class="px-6 pt-4 pb-2">
+            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#tag1</span>
+            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#tag2</span>
+            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#tag3</span>
+          </div>
+
+         <!--Boton para la pestaña-->
+          <div class="social-icons">
+            <a href="#" class="learn-more">LEARN MORE</a>
+        </div>
+        </div>
+
+
+      <!--Tercera card-->
+     <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+        <img class="w-full" src="https://via.placeholder.com/400x200" alt="Card image">
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">Card Title</div>
+          <p class="text-gray-700 text-base">
+            Here is some content for the card. It can be a description or any other content.
+          </p>
+        </div>
+        <div class="px-6 pt-4 pb-2">
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#tag1</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#tag2</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#tag3</span>
+        </div>
+
+       <!--Boton para la pestaña-->
+        <div class="social-icons">
+          <a href="#" class="learn-more">LEARN MORE</a>
+      </div>
+      </div>
+
+  
+      <!--Cuarta card-->
+     <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+        <img class="w-full" src="https://via.placeholder.com/400x200" alt="Card image">
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">Card Title</div>
+          <p class="text-gray-700 text-base">
+            Here is some content for the card. It can be a description or any other content.
+          </p>
+        </div>
+        <div class="px-6 pt-4 pb-2">
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#tag1</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#tag2</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#tag3</span>
+        </div>
+
+       <!--Boton para la pestaña-->
+        <div class="social-icons">
+          <a href="#" class="learn-more">LEARN MORE</a>
+      </div>
+      </div>
+
+  
+      <!--Quinta card-->
+      <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+        <img class="w-full" src="https://via.placeholder.com/400x200" alt="Card image">
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">Card Title</div>
+          <p class="text-gray-700 text-base">
+            Here is some content for the card. It can be a description or any other content.
+          </p>
+        </div>
+        <div class="px-6 pt-4 pb-2">
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#tag1</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#tag2</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#tag3</span>
+        </div>
+
+       <!--Boton para la pestaña-->
+        <div class="social-icons">
+          <a href="#" class="learn-more">LEARN MORE</a>
+      </div>
+      </div>
+
+  
+      <!--Sexta card-->
+      <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+        <img class="w-full" src="https://via.placeholder.com/400x200" alt="Card image">
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">Card Title</div>
+          <p class="text-gray-700 text-base">
+            Here is some content for the card. It can be a description or any other content.
+          </p>
+        </div>
+        <div class="px-6 pt-4 pb-2">
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#tag1</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#tag2</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#tag3</span>
+        </div>
+
+       <!--Boton para la pestaña-->
+        <div class="social-icons">
+          <a href="#" class="learn-more">LEARN MORE</a>
+      </div>
+      </div>
+
+  
+      <!--Septima card-->
+     <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+        <img class="w-full" src="https://via.placeholder.com/400x200" alt="Card image">
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">Card Title</div>
+          <p class="text-gray-700 text-base">
+            Here is some content for the card. It can be a description or any other content.
+          </p>
+        </div>
+        <div class="px-6 pt-4 pb-2">
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#tag1</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#tag2</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#tag3</span>
+        </div>
+
+       <!--Boton para la pestaña-->
+        <div class="social-icons">
+          <a href="#" class="learn-more">LEARN MORE</a>
+      </div>
+      </div>
+
+  
+      <!--Octava card-->
+      <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+        <img class="w-full" src="https://via.placeholder.com/400x200" alt="Card image">
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">Card Title</div>
+          <p class="text-gray-700 text-base">
+            Here is some content for the card. It can be a description or any other content.
+          </p>
+        </div>
+        <div class="px-6 pt-4 pb-2">
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#tag1</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#tag2</span>
+          <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#tag3</span>
+        </div>
+
+       <!--Boton para la pestaña-->
+        <div class="social-icons">
+          <a href="#" class="learn-more">LEARN MORE</a>
+      </div>
+      </div>
+
+
+       <!--Novena card-->
+         <div class="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+          <img class="w-full" src="https://via.placeholder.com/400x200" alt="Card image">
+          <div class="px-6 py-4">
+            <div class="font-bold text-xl mb-2">Card Title</div>
+            <p class="text-gray-700 text-base">
+              Here is some content for the card. It can be a description or any other content.
+            </p>
+          </div>
+          <div class="px-6 pt-4 pb-2">
+            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#tag1</span>
+            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#tag2</span>
+            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#tag3</span>
+          </div>
+
+        <!--Boton para la pestaña-->
+          <div class="social-icons">
+            <a href="#" class="learn-more">LEARN MORE</a>
+        </div>
+        </div>
+      
+    </article>
+
+    <!-- Modal -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p>Ingrese la contraseña para continuar:</p>
+            <input type="password" id="passwordInput" class="border p-2">
+            <button id="submitPassword" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-2">Enviar</button>
+        </div>
+    </div>
+
+  
+
+    <script src="../js/incorporacion.js"></script>
+</body>
+</html>

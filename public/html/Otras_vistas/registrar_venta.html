@@ -1,0 +1,143 @@
+   <!DOCTYPE html>
+   <html lang="es">
+   <head>
+       <meta charset="UTF-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <title>Menú Horizontal</title>
+       <script src="https://cdn.tailwindcss.com"></script>
+       <link rel="stylesheet" href="../../css/style.css">
+   </head>
+   <body>
+       
+   
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>DREAMART</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Gestión de Personal</a>
+                        <ul class="submenu">
+                      
+                            <li><a href="../Vistas/login_con_des.html">Contratar</a></li>
+                            <li><a href="../Vistas/login_despedir.html">Despedir</a></li>
+                            <li><a href="../Vistas/ver_personal.html">Ver personal</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Ventas</a>
+                        <ul class="submenu">
+                            <li><a href="../Vistas/registrar_venta.html">Registrar Venta</a></li>
+                            <li><a href="../Vistas/hiatorial_venta.html">Historial de Ventas</a></li>
+                            <li><a href="../Vistas/reporte_ventas.html">Reporte de Ventas</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Inventario</a>
+                        <ul class="submenu">
+                            <li><a href="../Vistas/ver_inventario.html">Ver Inventario</a></li>
+                            <li><a href="../Vistas/reporte_inventario.html">Reporte de Inventario</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Recompensas</a>
+                        <ul class="submenu">
+                            <li><a href="#">Ver Recompensas</a></li>
+                            <li><a href="../Vistas/login_con_des.html">Asignar Recompensas</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Visualizaciones</a>
+                        <ul class="submenu">
+                            <li><a href="../Vistas/grafica.html">Gráficos</a></li>
+                            <li><a href="../Vistas/informes.html">Informes</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="contact">Configuración</a>
+                        <ul class="submenu">
+                            <li><a href="../Vistas/inicio_sesion.html">Cerrar Sesión</a></li>
+                            <li><a href="#">Preferencias</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+       <main>
+           
+
+        <main>
+            <form id="registro-venta" method="POST" action="/registrar-venta" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="cliente">Nombre del Cliente:</label>
+                    <input type="text" id="cliente" name="cliente" required>
+                </div>
+                <div class="form-group">
+                    <label for="marca">Marca del Vehículo:</label>
+                    <input type="text" id="marca" name="marca" required>
+                </div>
+                <div class="form-group">
+                    <label for="modelo">Modelo del Vehículo:</label>
+                    <input type="text" id="modelo" name="modelo" required>
+                </div>
+                <div class="form-group">
+                    <label for="vin">Número de Serie del Vehículo (VIN):</label>
+                    <input type="text" id="vin" name="vin" required>
+                </div>
+                <div class="form-group">
+                    <label for="anio">Año del Vehículo:</label>
+                    <input type="number" id="anio" name="anio" required>
+                </div>
+                <div class="form-group">
+                    <label for="precio">Precio de Venta:</label>
+                    <input type="number" id="precio" name="precio" required>
+                </div>
+                <div class="form-group">
+                    <label for="fecha">Fecha de Venta:</label>
+                    <input type="date" id="fecha" name="fecha" required>
+                </div>
+                <div class="form-group">
+                    <label for="direccion">Dirección del Cliente:</label>
+                    <input type="text" id="direccion" name="direccion" required>
+                </div>
+                <div class="form-group">
+                    <label for="identificacion">Identificación (subir imagen):</label>
+                    <input type="file" id="identificacion" name="identificacion" accept="image/*" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Número Telefónico:</label>
+                    <input type="tel" id="telefono" name="telefono" required>
+                </div>
+                <div class="form-group">
+                    <label for="forma_pago">Forma de Pago:</label>
+                    <input type="text" id="forma_pago" name="forma_pago" required>
+                </div>
+                <div class="form-group">
+                    <label for="factura">Número de Factura:</label>
+                    <input type="text" id="factura" name="factura" required>
+                </div>
+                <div class="form-group">
+                    <label for="vendedor">Nombre del Vendedor:</label>
+                    <input type="text" id="vendedor" name="vendedor" required>
+                </div>
+                <div class="form-group">
+                    <button type="submit">Registrar Venta</button>
+                </div>
+            </form>
+            <div id="confirmation-message" style="display:none;">
+                <p>Venta registrada con éxito!</p>
+            </div>
+        </main>
+        <footer>
+            <p>&copy; 2024 Automoviliaria</p>
+        </footer>
+        <script src="../js/incorporacion.js"></script>
+    </body>
+    </html>
+    
+    
+
+   
+      <script src="../js/incorporacion.js"></script>
+   </body>
+   </html>
+   

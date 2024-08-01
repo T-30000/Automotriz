@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte de Ventas - Q1 2024</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+
+</head>
+<body>
+
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>DREAMART</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Gestión de Personal</a>
+                        <ul class="submenu">
+                      
+                            <li><a href="../Vistas/login_con_des.html">Contratar</a></li>
+                            <li><a href="../Vistas/login_despedir.html">Despedir</a></li>
+                            <li><a href="../Vistas/ver_personal.html">Ver personal</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Ventas</a>
+                        <ul class="submenu">
+                            <li><a href="../Vistas/registrar_venta.html">Registrar Venta</a></li>
+                            <li><a href="../Vistas/hiatorial_venta.html">Historial de Ventas</a></li>
+                            <li><a href="../Vistas/reporte_ventas.html">Reporte de Ventas</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Inventario</a>
+                        <ul class="submenu">
+                            <li><a href="../Vistas/ver_inventario.html">Ver Inventario</a></li>
+                            <li><a href="../Vistas/reporte_inventario.html">Reporte de Inventario</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Recompensas</a>
+                        <ul class="submenu">
+                            <li><a href="#">Ver Recompensas</a></li>
+                            <li><a href="../Vistas/login_con_des.html">Asignar Recompensas</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Visualizaciones</a>
+                        <ul class="submenu">
+                            <li><a href="../Vistas/grafica.html">Gráficos</a></li>
+                            <li><a href="../Vistas/informes.html">Informes</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="contact">Configuración</a>
+                        <ul class="submenu">
+                            <li><a href="../Vistas/inicio_sesion.html">Cerrar Sesión</a></li>
+                            <li><a href="#">Preferencias</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="overlay-container">
+        <img src="../img/auto2.png" alt="Background Image" class="w-full h-screen object-cover">
+        <div class="centered-text">
+            <h1 class="text-6xl font-bold">REPORTE DE VENTAS</h1>
+            <p class="text-2xl mt-4">Aquí podras observar el reporte de ventaa del mes.</p>
+            
+        </div>
+    </div>
+
+
+    <div class="report-container">
+        <header class="report-header">
+            <h1>Reporte de Ventas: Q1 2024</h1>
+        </header>
+
+        <section class="executive-summary">
+            <h2>1. Resumen Ejecutivo</h2>
+            <p><strong>Objetivo:</strong> Evaluar el desempeño de ventas del primer trimestre de 2024.</p>
+            <p><strong>Resultados Clave:</strong></p>
+            <ul>
+                <li>Total de ventas: $1,200,000</li>
+                <li>Crecimiento interanual: 15%</li>
+                <li>Productos más vendidos: Producto A, Producto B</li>
+            </ul>
+        </section>
+
+        <section class="report-period">
+            <h2>2. Período de Reporte</h2>
+            <p>1 de enero de 2024 - 31 de marzo de 2024</p>
+        </section>
+
+        <section class="sales-data">
+            <h2>3. Datos de Ventas</h2>
+            <p><strong>Total de Ventas:</strong> $1,200,000</p>
+            <p><strong>Comparación con Q1 2023:</strong> $1,050,000 (Crecimiento del 15%)</p>
+            <p><strong>Desglose por Categorías:</strong></p>
+            <ul>
+                <li>Producto A: $500,000</li>
+                <li>Producto B: $300,000</li>
+                <li>Región Norte: $400,000</li>
+                <li>Canal Online: $600,000</li>
+            </ul>
+        </section>
+
+        <section class="sales-analysis">
+            <h2>4. Análisis de Ventas</h2>
+            <p><strong>Productos Más Vendidos:</strong> Producto A ($500,000), Producto B ($300,000)</p>
+            <p><strong>Clientes Más Valiosos:</strong> Cliente X ($100,000), Cliente Y ($80,000)</p>
+            <p><strong>Rendimiento de los Vendedores:</strong></p>
+            <ul>
+                <li>Vendedor 1: $300,000</li>
+                <li>Vendedor 2: $250,000</li>
+            </ul>
+        </section>
+
+        <section class="kpis">
+            <h2>5. KPIs</h2>
+            <p><strong>Ingreso por Venta:</strong> $200</p>
+            <p><strong>Cantidad de Ventas:</strong> 6,000</p>
+            <p><strong>Margen de Ganancia:</strong> 25%</p>
+        </section>
+
+        <section class="market-analysis">
+            <h2>6. Análisis de Mercado</h2>
+            <p><strong>Tendencias del Mercado:</strong> Aumento del 10% en la demanda de productos ecológicos.</p>
+            <p><strong>Competencia:</strong> La empresa Competidor Z lanzó un producto similar con un 5% de descuento.</p>
+        </section>
+
+        <section class="forecasts">
+            <h2>7. Previsiones y Proyecciones</h2>
+            <p><strong>Pronóstico de Ventas para Q2 2024:</strong> $1,300,000</p>
+            <p><strong>Oportunidades:</strong> Expansión en el mercado asiático.</p>
+            <p><strong>Desafíos:</strong> Incremento en los costos de materiales.</p>
+        </section>
+
+        <section class="conclusions">
+            <h2>8. Conclusiones y Recomendaciones</h2>
+            <p><strong>Conclusiones:</strong> El crecimiento en las ventas es consistente con el aumento en la demanda del mercado.</p>
+            <p><strong>Recomendaciones:</strong> Incrementar la inversión en marketing digital y explorar nuevas oportunidades en mercados emergentes.</p>
+        </section>
+
+        <footer class="report-footer">
+            <p>&copy; 2024 - Reporte de Ventas</p>
+            <button id="download-pdf">Descargar Reporte en PDF</button>
+        </footer>
+    </div>
+
+
+    
+<script>
+    document.getElementById('download-pdf').addEventListener('click', () => {
+    const { jsPDF } = window.jspdf;
+
+    html2canvas(document.querySelector('.report-container')).then(canvas => {
+        const imgData = canvas.toDataURL('image/png');
+        const doc = new jsPDF({
+            orientation: 'portrait',
+            unit: 'px',
+            format: [canvas.width, canvas.height]
+        });
+
+        doc.addImage(imgData, 'PNG', 0, 0, canvas.width, canvas.height);
+        doc.save('reporte_ventas_Q1_2024.pdf');
+    }).catch(error => {
+        console.error('Error generating PDF:', error);
+    });
+});
+</script>
+   
+    
+</body>
+</html>

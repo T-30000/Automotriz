@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle del Producto</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+    <div class="container mx-auto p-4">
+        <a href="Vendedor.html" class="text-blue-500 hover:underline mb-4 block">&larr; Volver</a>
+        <div id="product-details" class="bg-white p-6 rounded-lg shadow-md">
+            <!-- Los detalles del producto se mostrarán aquí -->
+        </div>
+    </div>
+
+    <script>
+        // Información de los productos
+        const products = [
+            {
+                id: 1,
+                name: 'KIA 2020',
+                description: `
+                    <strong>Marca y Modelo</strong>: Kia 2020<br>
+                    <strong>Motor y Rendimiento</strong>:<br>
+                    - Motor: 2.0L I4<br>
+                    - Potencia: 147 hp<br>
+                    - Transmisión: Automática de 6 velocidades<br>
+                    - Tracción: Delantera<br>
+                    - Consumo de combustible: 8.0 L/100 km en ciudad y 6.0 L/100 km en carretera<br><br>
+                    <strong>Exterior</strong>:<br>
+                    - Faros LED<br>
+                    - Luces traseras LED<br>
+                    - Llantas de aleación de 17 pulgadas<br>
+                    - Espejos laterales eléctricos y calefactados<br>
+                    - Diseño aerodinámico y deportivo<br><br>
+                    <strong>Interior</strong>:<br>
+                    - Capacidad: 5 pasajeros<br>
+                    - Asientos: Tapizados en tela de alta calidad<br>
+                    - Sistema de infoentretenimiento con pantalla táctil de 8 pulgadas<br>
+                    - Conectividad: Apple CarPlay y Android Auto<br>
+                    - Sistema de sonido de 6 altavoces<br>
+                    - Aire acondicionado automático de doble zona<br><br>
+                    <strong>Seguridad</strong>:<br>
+                    - Sistema de frenos antibloqueo (ABS)<br>
+                    - Control de estabilidad electrónico (ESC)<br>
+                    - Asistente de arranque en pendientes (HAC)<br>
+                    - Cámara de visión trasera<br>
+                    - Sensores de estacionamiento traseros<br>
+                    - Bolsas de aire frontales, laterales y de cortina<br><br>
+                    <strong>Tecnología y Conectividad</strong>:<br>
+                    - Bluetooth para llamadas manos libres y transmisión de audio<br>
+                    - Cargador inalámbrico para dispositivos móviles<br>
+                    - Puertos USB para carga y conectividad<br>
+                    - Sistema de navegación integrado (en versiones superiores)<br><br>
+                    <strong>Comodidad y Conveniencia</strong>:<br>
+                    - Volante multifunción ajustable<br>
+                    - Entrada sin llave con botón de arranque<br>
+                    - Asientos traseros abatibles para mayor espacio de carga<br>
+                    - Control de crucero<br>`,
+                image: 'https://autoprice.com.mx/imgs/fotos/3692/98dc3d1292124496_ap.jpg'
+            },
+            {
+                id: 2,
+                name: 'Camaro 2019',
+                description: `
+                    <strong>Marca y Modelo</strong>: Chevrolet Camaro 2019<br>
+                    <strong>Motor y Rendimiento</strong>:<br>
+                    - Motor: 2.0L I4 Turbo<br>
+                    - Potencia: 275 hp<br>
+                    - Transmisión: Automática de 8 velocidades<br>
+                    - Tracción: Trasera<br>
+                    - Consumo de combustible: 11.2 L/100 km en ciudad y 7.8 L/100 km en carretera<br><br>
+                    <strong>Exterior</strong>:<br>
+                    - Faros HID<br>
+                    - Luces traseras LED<br>
+                    - Llantas de aleación de 20 pulgadas<br>
+                    - Diseño deportivo y agresivo<br><br>
+                    <strong>Interior</strong>:<br>
+                    - Capacidad: 4 pasajeros<br>
+                    - Asientos: Tapizados en cuero<br>
+                    - Sistema de infoentretenimiento con pantalla táctil de 8 pulgadas<br>
+                    - Conectividad: Apple CarPlay y Android Auto<br>
+                    - Sistema de sonido premium Bose<br>
+                    - Aire acondicionado automático de doble zona<br><br>
+                    <strong>Seguridad</strong>:<br>
+                    - Sistema de frenos antibloqueo (ABS)<br>
+                    - Control de estabilidad electrónico (ESC)<br>
+                    - Asistente de arranque en pendientes (HAC)<br>
+                    - Cámara de visión trasera<br>
+                    - Sensores de estacionamiento traseros<br>
+                    - Bolsas de aire frontales, laterales y de cortina<br><br>
+                    <strong>Tecnología y Conectividad</strong>:<br>
+                    - Bluetooth para llamadas manos libres y transmisión de audio<br>
+                    - Cargador inalámbrico para dispositivos móviles<br>
+                    - Puertos USB para carga y conectividad<br>
+                    - Sistema de navegación integrado (en versiones superiores)<br><br>
+                    <strong>Comodidad y Conveniencia</strong>:<br>
+                    - Volante multifunción ajustable<br>
+                    - Entrada sin llave con botón de arranque<br>
+                    - Asientos traseros abatibles para mayor espacio de carga<br>
+                    - Control de crucero<br>`,
+                image: 'https://cdn-images.motor.es/image/m/1320w.webp/fotos-noticias/2021/01/chevrolet-camaro-ford-mustang-dodge-challenger-ventas-2020-202174502-1610712872_2.jpg'
+            },
+            {
+                id: 3,
+                name: 'Mustang 2024',
+                description: `
+                    <strong>Marca y Modelo</strong>: Ford Mustang 2024<br>
+                    <strong>Motor y Rendimiento</strong>:<br>
+                    - Motor: 5.0L V8<br>
+                    - Potencia: 450 hp<br>
+                    - Transmisión: Manual de 6 velocidades<br>
+                    - Tracción: Trasera<br>
+                    - Consumo de combustible: 15.0 L/100 km en ciudad y 10.0 L/100 km en carretera<br><br>
+                    <strong>Exterior</strong>:<br>
+                    - Faros LED<br>
+                    - Luces traseras LED<br>
+                    - Llantas de aleación de 19 pulgadas<br>
+                    - Diseño clásico y musculoso<br><br>
+                    <strong>Interior</strong>:<br>
+                    - Capacidad: 4 pasajeros<br>
+                    - Asientos: Tapizados en cuero<br>
+                    - Sistema de infoentretenimiento con pantalla táctil de 12 pulgadas<br>
+                    - Conectividad: Apple CarPlay y Android Auto<br>
+                    - Sistema de sonido premium B&O<br>
+                    - Aire acondicionado automático de doble zona<br><br>
+                    <strong>Seguridad</strong>:<br>
+                    - Sistema de frenos antibloqueo (ABS)<br>
+                    - Control de estabilidad electrónico (ESC)<br>
+                    - Asistente de arranque en pendientes (HAC)<br>
+                    - Cámara de visión trasera<br>
+                    - Sensores de estacionamiento traseros<br>
+                    - Bolsas de aire frontales, laterales y de cortina<br><br>
+                    <strong>Tecnología y Conectividad</strong>:<br>
+                    - Bluetooth para llamadas manos libres y transmisión de audio<br>
+                    - Cargador inalámbrico para dispositivos móviles<br>
+                    - Puertos USB para carga y conectividad<br>
+                    - Sistema de navegación integrado (en versiones superiores)<br><br>
+                    <strong>Comodidad y Conveniencia</strong>:<br>
+                    - Volante multifunción ajustable<br>
+                    - Entrada sin llave con botón de arranque<br>
+                    - Asientos traseros abatibles para mayor espacio de carga<br>
+                    - Control de crucero<br>`,
+                image: 'https://build.ford.com/dig/Ford/Mustang/2024/HD-TILE/Image%5B%7CFord%7CMustang%7C2024%7C1%7C1.%7C300A.P8C..PHY..88D.89W.~2WD00_BCMAB.AC--C.13R.COU.BSHEH.BYBBR.CJPAA.LTS.51W.64T.TA6.RWD.45D.99F.FS--A.HLLAD.58V.IDBAD.SY4.44X.GT.YZTAB.CLO.%5D/EXT/1/vehicle.png'
+            },
+            {
+                id: 4,
+                name: 'Nissan Onix',
+                description: `
+                    <strong>Marca y Modelo</strong>: Nissan Onix 2021<br>
+                    <strong>Motor y Rendimiento</strong>:<br>
+                    - Motor: 1.0L I3 Turbo<br>
+                    - Potencia: 116 hp<br>
+                    - Transmisión: Automática de 6 velocidades<br>
+                    - Tracción: Delantera<br>
+                    - Consumo de combustible: 7.8 L/100 km en ciudad y 5.8 L/100 km en carretera<br><br>
+                    <strong>Exterior</strong>:<br>
+                    - Faros LED<br>
+                    - Luces traseras LED<br>
+                    - Llantas de aleación de 16 pulgadas<br>
+                    - Diseño moderno y aerodinámico<br><br>
+                    <strong>Interior</strong>:<br>
+                    - Capacidad: 5 pasajeros<br>
+                    - Asientos: Tapizados en tela de alta calidad<br>
+                    - Sistema de infoentretenimiento con pantalla táctil de 7 pulgadas<br>
+                    - Conectividad: Apple CarPlay y Android Auto<br>
+                    - Sistema de sonido de 4 altavoces<br>
+                    - Aire acondicionado manual<br><br>
+                    <strong>Seguridad</strong>:<br>
+                    - Sistema de frenos antibloqueo (ABS)<br>
+                    - Control de estabilidad electrónico (ESC)<br>
+                    - Asistente de arranque en pendientes (HAC)<br>
+                    - Cámara de visión trasera (en versiones superiores)<br>
+                    - Sensores de estacionamiento traseros (en versiones superiores)<br>
+                    - Bolsas de aire frontales y laterales<br><br>
+                    <strong>Tecnología y Conectividad</strong>:<br>
+                    - Bluetooth para llamadas manos libres y transmisión de audio<br>
+                    - Puertos USB para carga y conectividad<br>
+                    - Sistema de navegación integrado (en versiones superiores)<br><br>
+                    <strong>Comodidad y Conveniencia</strong>:<br>
+                    - Volante multifunción ajustable<br>
+                    - Entrada sin llave con botón de arranque (en versiones superiores)<br>
+                    - Asientos traseros abatibles para mayor espacio de carga<br>
+                    - Control de crucero (en versiones superiores)<br>`,
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS5XTEVYZwyUc8eB4iEGIytl-47cA7dEltoILRnVpamBOKpTt8BZc4ZIwyqgsrY4nNsjE&usqp=CAU"
+            },
+            // Más productos si es necesario
+        ];
+
+        // Obtener el ID del producto de la URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
+
+        // Encontrar el producto correspondiente
+        const product = products.find(p => p.id == productId);
+
+        if (product) {
+            document.getElementById('product-details').innerHTML = `
+                <img src="${product.image}" alt="${product.name}" class="w-full h-64 object-cover rounded-lg mb-4">
+                <h1 class="text-2xl font-bold mb-2">${product.name}</h1>
+                <p class="text-gray-700 mb-4">${product.description}</p>
+                <button class="bg-green-500 text-white px-4 py-2 rounded" onclick="window.location.href='form_vender.html?id=${product.id}'">Vender</button>
+                <button class="bg-yellow-500 text-white px-4 py-2 rounded ml-2" onclick="window.location.href='form_apartar.html?id=${product.id}'">Apartar</button>
+            `;
+        } else {
+            document.getElementById('product-details').innerHTML = `
+                <p class="text-red-500">Producto no encontrado</p>
+            `;
+        }
+    </script>
+</body>
+</html>

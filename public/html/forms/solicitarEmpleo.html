@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidate Cards</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+
+</head>
+
+<body class="bg-gray-100">
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>DREAMART</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Gestión de Personal</a>
+                        <ul class="submenu">
+                            <li><a href="../Vistas/login_con_des.html">Contratar</a></li>
+                            <li><a href="../Vistas/login_despedir.html">Despedir</a></li>
+                            <li><a href="../Vistas/ver_personal.html">Ver personal</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Ventas</a>
+                        <ul class="submenu">
+                            <li><a href="../Vistas/registrar_venta.html">Registrar Venta</a></li>
+                            <li><a href="../Vistas/hiatorial_venta.html">Historial de Ventas</a></li>
+                            <li><a href="../Vistas/reporte_ventas.html">Reporte de Ventas</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Inventario</a>
+                        <ul class="submenu">
+                            <li><a href="../Vistas/ver_inventario.html">Ver Inventario</a></li>
+                            <li><a href="../Vistas/reporte_inventario.html">Reporte de Inventario</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Recompensas</a>
+                        <ul class="submenu">
+                            <li><a href="#">Ver Recompensas</a></li>
+                            <li><a href="../Vistas/login_con_des.html">Asignar Recompensas</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Visualizaciones</a>
+                        <ul class="submenu">
+                            <li><a href="../Vistas/grafica.html">Gráficos</a></li>
+                            <li><a href="../Vistas/informes.html">Informes</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="contact">Configuración</a>
+                        <ul class="submenu">
+                            <li><a href="../Vistas/inicio_sesion.html">Cerrar Sesión</a></li>
+                            <li><a href="#">Preferencias</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <div class="overlay-container">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvo8bIojkhYD2iYLOlYiFYi5Yqff8PQfXS3r8opOzxh_gI2wB3e0nzNhcoMHDRuKw8KOs&usqp=CAU" alt="..." class="w-full h-screen object-cover">
+        <div class="centered-text">
+            <h1 class="text-6xl font-bold">CONTRATAR EMPLEADOS</h1>
+            <p class="text-2xl mt-4">Aquí podras observar una variedad de solicitudes de empleados.</p>
+
+        </div>
+    </div>
+
+    <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
+        <h1 class="text-2xl font-bold mb-6 text-gray-700">Registrar Nuevo Empleado</h1>
+        <form action="/registrar-nuevo-empleado" method="post" class="space-y-4">
+            <div>
+                <label for="nombre" class="block text-sm font-medium text-gray-700">Nombre</label>
+                <input type="text" id="nombre" name="nombre" required
+                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    placeholder="Nombre del empleado">
+            </div>
+            <div>
+                <label for="apellido" class="block text-sm font-medium text-gray-700">Apellido</label>
+                <input type="text" id="apellido" name="apellido" required
+                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    placeholder="Apellido del empleado">
+            </div>
+            <div>
+                <label for="telefono" class="block text-sm font-medium text-gray-700">Teléfono</label>
+                <input type="text" id="telefono" name="telefono"
+                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    placeholder="Número de teléfono">
+            </div>
+            <div>
+                <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                <input type="email" id="email" name="email"
+                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    placeholder="Correo electrónico">
+            </div>
+            <div>
+                <label for="direccion" class="block text-sm font-medium text-gray-700">Dirección</label>
+                <textarea id="direccion" name="direccion" rows="3"
+                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    placeholder="Dirección del empleado"></textarea>
+            </div>
+            <div>
+                <label for="numero_seguro" class="block text-sm font-medium text-gray-700">Número de Seguro</label>
+                <input type="text" id="numero_seguro" name="numero_seguro"
+                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    placeholder="Número de seguro social">
+            </div>
+            <div>
+                <label for="sueldo_base" class="block text-sm font-medium text-gray-700">Sueldo Base</label>
+                <input type="number" id="sueldo_base" name="sueldo_base" step="0.01" required
+                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    placeholder="Sueldo base del empleado">
+            </div>
+            <div>
+                <label for="prestacion" class="block text-sm font-medium text-gray-700">Prestación</label>
+                <input type="number" id="prestacion" name="prestacion" step="0.01" required
+                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    placeholder="Prestación del empleado">
+            </div>
+            <div>
+                <label for="contrasena" class="block text-sm font-medium text-gray-700">Contraseña</label>
+                <input type="password" id="contrasena" name="contrasena" required
+                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    placeholder="Contraseña del empleado">
+            </div>
+            <div>
+                <label for="imagen_url" class="block text-sm font-medium text-gray-700">URL de la Imagen</label>
+                <input type="text" id="imagen_url" name="imagen_url"
+                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    placeholder="URL de la imagen del empleado">
+            </div>
+            <div>
+                <button type="submit"
+                    class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    Registrar Empleado
+                </button>
+            </div>
+        </form>
+    </div>
+    
+
+
+
+</body>
+
+</html>

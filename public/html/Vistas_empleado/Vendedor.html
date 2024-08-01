@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Horizontal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../../css/style_vendedor.css">
+</head>
+<body>
+
+    <header>
+        <div class="container mx-auto p-4">
+            <div class="logo">
+                <h1 class="text-3xl font-bold">DREAMART</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="contact">Configuración</a>
+                        <ul class="submenu">
+                            <li><a href="miperfil.html">Perfil</a></li>
+                            <li><a href="Historial_ventas.html">Historial de ventas</a></li> 
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <br>
+    <br>
+    <div class="flex justify-center mb-6">
+        <div class="relative w-full max-w-xl">
+            <span class="absolute inset-y-0 left-0 flex items-center pl-3">
+                <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M10 2a8 8 0 106.32 13.906l4.387 4.387a1 1 0 01-1.414 1.414l-4.387-4.387A8 8 0 1010 2zm0 2a6 6 0 110 12A6 6 0 0110 4z"/>
+                </svg>
+            </span>
+            <input type="text" id="searchInput" placeholder="Buscar productos..." class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-full shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="productGrid">
+        <!-- Card 1 -->
+        <div class="bg-white shadow-md rounded-lg overflow-hidden product-card">
+            <img src="https://autoprice.com.mx/imgs/fotos/3692/98dc3d1292124496_ap.jpg" alt="KIA 2020" class="w-full h-48 object-cover">
+            <div class="p-4">
+                <h3 class="text-xl font-bold mb-2">KIA 2020</h3>
+                <button class="bg-blue-500 text-white px-4 py-2 rounded ver-btn" data-id="1">Ver</button>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white shadow-md rounded-lg overflow-hidden product-card">
+            <img src="https://cdn-images.motor.es/image/m/1320w.webp/fotos-noticias/2021/01/chevrolet-camaro-ford-mustang-dodge-challenger-ventas-2020-202174502-1610712872_2.jpg" alt="Camaro 2019" class="w-full h-48 object-cover">
+            <div class="p-4">
+                <h3 class="text-xl font-bold mb-2">Camaro 2019</h3>
+                <button class="bg-blue-500 text-white px-4 py-2 rounded ver-btn" data-id="2">Ver</button>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white shadow-md rounded-lg overflow-hidden product-card">
+            <img src="https://build.ford.com/dig/Ford/Mustang/2024/HD-TILE/Image%5B%7CFord%7CMustang%7C2024%7C1%7C1.%7C300A.P8C..PHY..88D.89W.~2WD00_BCMAB.AC--C.13R.COU.BSHEH.BYBBR.CJPAA.LTS.51W.64T.TA6.RWD.45D.99F.FS--A.HLLAD.58V.IDBAD.SY4.44X.GT.YZTAB.CLO.%5D/EXT/1/vehicle.png" alt="Mustang 2024" class="w-full h-48 object-cover">
+            <div class="p-4">
+                <h3 class="text-xl font-bold mb-2">Mustang 2024</h3>
+                <button class="bg-blue-500 text-white px-4 py-2 rounded ver-btn" data-id="3">Ver</button>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-white shadow-md rounded-lg overflow-hidden product-card">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS5XTEVYZwyUc8eB4iEGIytl-47cA7dEltoILRnVpamBOKpTt8BZc4ZIwyqgsrY4nNsjE&usqp=CAU" alt="Nissan Onix" class="w-full h-48 object-cover">
+            <div class="p-4">
+                <h3 class="text-xl font-bold mb-2">Nissan Onix</h3>
+                <button class="bg-blue-500 text-white px-4 py-2 rounded ver-btn" data-id="4">Ver</button>
+            </div>
+        </div>
+
+        <!-- More cards as needed -->
+    </div>
+
+    <script>
+        // Obtener todos los elementos de las tarjetas de productos
+        const productCards = document.querySelectorAll('.product-card');
+
+        // Añadir event listener al campo de búsqueda
+        document.getElementById('searchInput').addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+
+            productCards.forEach(card => {
+                const productName = card.querySelector('h3').textContent.toLowerCase();
+                if (productName.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+
+        // Redirección a la página de ver venta
+        document.querySelectorAll('.ver-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const productId = this.getAttribute('data-id');
+                window.location.href = `ver_venta.html?id=${productId}`;
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,299 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="registrar_cliente.php" method="post">
+        <h2>Registro de Cliente</h2>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required>
+        
+        <label for="telefono">Teléfono:</label>
+        <input type="text" id="telefono" name="telefono">
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        
+        <label for="direccion">Dirección:</label>
+        <textarea id="direccion" name="direccion"></textarea>
+        
+        <label for="identificacion">Identificación:</label>
+        <input type="text" id="identificacion" name="identificacion">
+        
+        <label for="correo">Correo:</label>
+        <input type="email" id="correo" name="correo" required>
+        
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" name="contrasena" required>
+        
+        <label for="estado">Estado:</label>
+        <select id="estado" name="estado">
+            <option value="Nuevo">Nuevo</option>
+            <option value="Activo">Activo</option>
+            <option value="Inactivo">Inactivo</option>
+        </select>
+        
+        <button type="submit">Registrar Cliente</button>
+    </form>
+    <form action="registrar_empleado.php" method="post">
+        <h2>Registro de Empleado</h2>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required>
+        
+        <label for="telefono">Teléfono:</label>
+        <input type="text" id="telefono" name="telefono">
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        
+        <label for="direccion">Dirección:</label>
+        <textarea id="direccion" name="direccion"></textarea>
+        
+        <label for="fecha_contrato">Fecha de Contrato:</label>
+        <input type="date" id="fecha_contrato" name="fecha_contrato">
+        
+        <label for="numero_seguro">Número de Seguro:</label>
+        <input type="text" id="numero_seguro" name="numero_seguro">
+        
+        <label for="puesto">Puesto:</label>
+        <input type="text" id="puesto" name="puesto">
+        
+        <label for="sueldo_base">Sueldo Base:</label>
+        <input type="number" id="sueldo_base" name="sueldo_base" step="0.01">
+        
+        <label for="descuentos">Descuentos:</label>
+        <input type="number" id="descuentos" name="descuentos" step="0.01">
+        
+        <label for="comision">Comisión:</label>
+        <input type="number" id="comision" name="comision" step="0.01">
+        
+        <label for="prestacion">Prestación:</label>
+        <input type="number" id="prestacion" name="prestacion" step="0.01">
+        
+        <label for="capacitacion">Capacitación:</label>
+        <input type="text" id="capacitacion" name="capacitacion">
+        
+        <label for="prestamo">Préstamo:</label>
+        <input type="number" id="prestamo" name="prestamo" step="0.01">
+        
+        <label for="correo">Correo:</label>
+        <input type="email" id="correo" name="correo" required>
+        
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" name="contrasena" required>
+        
+        <label for="estado">Estado:</label>
+        <select id="estado" name="estado">
+            <option value="Solicitado">Solicitado</option>
+            <option value="Activo">Activo</option>
+            <option value="Inactivo">Inactivo</option>
+        </select>
+        
+        <button type="submit">Registrar Empleado</button>
+    </form>
+    <form action="registrar_auto.php" method="post">
+        <h2>Registro de Auto</h2>
+        <label for="numero_serie">Número de Serie:</label>
+        <input type="text" id="numero_serie" name="numero_serie" required>
+        
+        <label for="tipo_auto">Tipo de Auto:</label>
+        <input type="text" id="tipo_auto" name="tipo_auto">
+        
+        <label for="marca">Marca:</label>
+        <input type="text" id="marca" name="marca">
+        
+        <label for="modelo">Modelo:</label>
+        <input type="text" id="modelo" name="modelo">
+        
+        <label for="anio">Año:</label>
+        <input type="number" id="anio" name="anio" min="1900" max="2099">
+        
+        <label for="cilindros">Cilindros:</label>
+        <input type="number" id="cilindros" name="cilindros">
+        
+        <label for="disponibilidad">Disponibilidad:</label>
+        <select id="disponibilidad" name="disponibilidad">
+            <option value="1">Disponible</option>
+            <option value="0">No Disponible</option>
+        </select>
+        
+        <label for="precio">Precio:</label>
+        <input type="number" id="precio" name="precio" step="0.01">
+        
+        <label for="puertas">Puertas:</label>
+        <input type="number" id="puertas" name="puertas">
+        
+        <label for="color">Color:</label>
+        <input type="text" id="color" name="color">
+        
+        <label for="seguro_id">Seguro:</label>
+        <input type="number" id="seguro_id" name="seguro_id">
+        
+        <label for="servicio">Servicio:</label>
+        <input type="number" id="servicio" name="servicio" step="0.01">
+        
+        <label for="garantia">Garantía:</label>
+        <input type="number" id="garantia" name="garantia" step="0.01">
+        
+        <label for="costo">Costo:</label>
+        <input type="number" id="costo" name="costo" step="0.01">
+        
+        <label for="descuento">Descuento:</label>
+        <input type="number" id="descuento" name="descuento" step="0.01">
+        
+        <label for="costo_venta">Costo de Venta:</label>
+        <input type="number" id="costo_venta" name="costo_venta" step="0.01">
+        
+        <label for="estado">Estado:</label>
+        <input type="text" id="estado" name="estado">
+        
+        <button type="submit">Registrar Auto</button>
+    </form>
+    <form action="registrar_pago.php" method="post">
+        <h2>Registro de Pago</h2>
+        <label for="id_cliente">ID Cliente:</label>
+        <input type="number" id="id_cliente" name="id_cliente" required>
+        
+        <label for="tipo_pago_id">Tipo de Pago:</label>
+        <input type="number" id="tipo_pago_id" name="tipo_pago_id" required>
+        
+        <label for="monto">Monto:</label>
+        <input type="number" id="monto" name="monto" step="0.01" required>
+        
+        <label for="fecha">Fecha:</label>
+        <input type="datetime-local" id="fecha" name="fecha" value="<?php echo date('Y-m-d\TH:i'); ?>">
+        
+        <button type="submit">Registrar Pago</button>
+    </form>
+    <form action="registrar_seguro.php" method="post">
+        <h2>Registro de Seguro</h2>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        
+        <label for="tipo_seguro">Tipo de Seguro:</label>
+        <input type="text" id="tipo_seguro" name="tipo_seguro" required>
+        
+        <button type="submit">Registrar Seguro</button>
+    </form>
+    <form action="registrar_tipo_pago.php" method="post">
+        <h2>Registro de Tipo de Pago</h2>
+        <label for="tipo_pago">Tipo de Pago:</label>
+        <input type="text" id="tipo_pago" name="tipo_pago" required>
+        
+        <label for="detalle_pago">Detalle de Pago:</label>
+        <input type="text" id="detalle_pago" name="detalle_pago">
+        
+        <button type="submit">Registrar Tipo de Pago</button>
+    </form>
+    <form action="registrar_zona.php" method="post">
+        <h2>Registro de Zona</h2>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        
+        <label for="descripcion">Descripción:</label>
+        <textarea id="descripcion" name="descripcion"></textarea>
+        
+        <button type="submit">Registrar Zona</button>
+    </form>
+    <form action="registrar_sucursal.php" method="post">
+        <h2>Registro de Sucursal</h2>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        
+        <label for="direccion">Dirección:</label>
+        <textarea id="direccion" name="direccion"></textarea>
+        
+        <label for="id_zona">Zona:</label>
+        <input type="number" id="id_zona" name="id_zona">
+        
+        <button type="submit">Registrar Sucursal</button>
+    </form>
+    <form action="registrar_rol.php" method="post">
+        <h2>Registro de Rol</h2>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        
+        <label for="descripcion">Descripción:</label>
+        <textarea id="descripcion" name="descripcion"></textarea>
+        
+        <button type="submit">Registrar Rol</button>
+    </form>
+    <form action="registrar_permiso.php" method="post">
+        <h2>Registro de Permiso</h2>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+        
+        <label for="descripcion">Descripción:</label>
+        <textarea id="descripcion" name="descripcion"></textarea>
+        
+        <button type="submit">Registrar Permiso</button>
+    </form>
+    <form action="asignar_rol.php" method="post">
+        <h2>Asignar Rol a Usuario</h2>
+        <label for="usuario_id">ID Usuario:</label>
+        <input type="number" id="usuario_id" name="usuario_id" required>
+        
+        <label for="rol_id">ID Rol:</label>
+        <input type="number" id="rol_id" name="rol_id" required>
+        
+        <button type="submit">Asignar Rol</button>
+    </form>
+    <form action="registrar_cuenta.php" method="post">
+        <h2>Registro de Cuenta</h2>
+        <label for="numero_cuenta">Número de Cuenta:</label>
+        <input type="text" id="numero_cuenta" name="numero_cuenta" required>
+        
+        <label for="tipo_cuenta">Tipo de Cuenta:</label>
+        <input type="text" id="tipo_cuenta" name="tipo_cuenta" required>
+        
+        <label for="saldo">Saldo:</label>
+        <input type="number" id="saldo" name="saldo" step="0.01" required>
+        
+        <button type="submit">Registrar Cuenta</button>
+    </form>
+    <form action="registrar_credencial.php" method="post">
+        <h2>Registro de Credenciales</h2>
+        <label for="correo">Correo:</label>
+        <input type="email" id="correo" name="correo" required>
+        
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" name="contrasena" required>
+        
+        <button type="submit">Registrar Credenciales</button>
+    </form>
+    <form action="registrar_historial_cambios.php" method="post">
+        <h2>Registro de Historial de Cambios</h2>
+        <label for="tabla_afectada">Tabla Afectada:</label>
+        <input type="text" id="tabla_afectada" name="tabla_afectada" required>
+        
+        <label for="operacion">Operación:</label>
+        <input type="text" id="operacion" name="operacion" required>
+        
+        <label for="registro_id">ID Registro:</label>
+        <input type="text" id="registro_id" name="registro_id">
+        
+        <label for="campo_afectado">Campo Afectado:</label>
+        <input type="text" id="campo_afectado" name="campo_afectado">
+        
+        <label for="valor_anterior">Valor Anterior:</label>
+        <textarea id="valor_anterior" name="valor_anterior"></textarea>
+        
+        <label for="valor_nuevo">Valor Nuevo:</label>
+        <textarea id="valor_nuevo" name="valor_nuevo"></textarea>
+        
+        <label for="empleado_id">ID Empleado:</label>
+        <input type="number" id="empleado_id" name="empleado_id">
+        
+        <button type="submit">Registrar Historial de Cambios</button>
+    </form>
+                                                        
+</body>
+</html>

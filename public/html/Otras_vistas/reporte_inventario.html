@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte de Inventario de Coches</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-100">
+
+
+
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>DREAMART</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Gestión de Personal</a>
+                        <ul class="submenu">
+                      
+                            <li><a href="../Vistas/login_con_des.html">Contratar</a></li>
+                            <li><a href="../Vistas/login_despedir.html">Despedir</a></li>
+                            <li><a href="../Vistas/ver_personal.html">Ver personal</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Ventas</a>
+                        <ul class="submenu">
+                            <li><a href="../Vistas/registrar_venta.html">Registrar Venta</a></li>
+                            <li><a href="../Vistas/hiatorial_venta.html">Historial de Ventas</a></li>
+                            <li><a href="../Vistas/reporte_ventas.html">Reporte de Ventas</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Inventario</a>
+                        <ul class="submenu">
+                            <li><a href="../Vistas/ver_inventario.html">Ver Inventario</a></li>
+                            <li><a href="../Vistas/reporte_inventario.html">Reporte de Inventario</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Recompensas</a>
+                        <ul class="submenu">
+                            <li><a href="#">Ver Recompensas</a></li>
+                            <li><a href="../Vistas/login_con_des.html">Asignar Recompensas</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Visualizaciones</a>
+                        <ul class="submenu">
+                            <li><a href="../Vistas/grafica.html">Gráficos</a></li>
+                            <li><a href="../Vistas/informes.html">Informes</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#" class="contact">Configuración</a>
+                        <ul class="submenu">
+                            <li><a href="../Vistas/inicio_sesion.html">Cerrar Sesión</a></li>
+                            <li><a href="#">Preferencias</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <div class="overlay-container">
+        <img src="../img/auto2.png" alt="Background Image" class="w-full h-screen object-cover">
+        <div class="centered-text">
+            <h1 class="text-6xl font-bold">REPORTE DE VENTAS</h1>
+            <p class="text-2xl mt-4">Aquí podras observar el reporte de ventaa del mes.</p>
+            
+        </div>
+    </div>
+
+
+
+    <div class="container1 mx-auto mt-8">
+        <h1 class="text-4xl font-bold mb-8 text-center">Reporte de Inventario de Coches</h1>
+        <div class="flex justify-center mb-8">
+            <input type="text" id="searchInput" placeholder="Buscar por Marca o Modelo"
+                class="px-4 py-2 border rounded-md shadow-sm w-full max-w-xs">
+        </div>
+
+        <div class="overflow1-x-auto">
+            <table class="table-auto w-full">
+                <thead>
+                    <tr class="bg-gray-200">
+                        <th class="px-4 py-2">ID</th>
+                        <th class="px-4 py-2">Marca</th>
+                        <th class="px-4 py-2">Modelo</th>
+                        <th class="px-4 py-2">Año</th>
+                        <th class="px-4 py-2">Color</th>
+                        <th class="px-4 py-2">Precio</th>
+                        <th class="px-4 py-2">Estado</th>
+                    </tr>
+                </thead>
+                <tbody id="carsTableBody">
+                    <!-- Example Row -->
+                    <tr>
+                        <td class="border px-4 py-2">1</td>
+                        <td class="border px-4 py-2">Toyota</td>
+                        <td class="border px-4 py-2">Corolla</td>
+                        <td class="border px-4 py-2">2020</td>
+                        <td class="border px-4 py-2">Blanco</td>
+                        <td class="border px-4 py-2">$20,000</td>
+                        <td class="border px-4 py-2">Disponible</td>
+                    </tr>
+                    <!-- Agrega más filas según sea necesario -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        document.getElementById('searchInput').addEventListener('input', function () {
+            var filter = this.value.toUpperCase();
+            var rows = document.querySelectorAll('#carsTableBody tr');
+
+            rows.forEach(function (row) {
+                var cells = row.getElementsByTagName('td');
+                var match = false;
+
+                for (var i = 1; i < cells.length; i++) {
+                    var cell = cells[i];
+                    if (cell.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                        match = true;
+                        break;
+                    }
+                }
+
+                if (match) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        });
+
+        // Ejemplo de datos de inventario, en un caso real esto debería obtenerse de una base de datos
+        const inventory = [
+            { id: 1, marca: 'Toyota', modelo: 'Corolla', año: 2020, color: 'Blanco', precio: '$20,000', estado: 'Disponible' },
+            { id: 2, marca: 'Honda', modelo: 'Civic', año: 2019, color: 'Negro', precio: '$18,000', estado: 'Vendido' },
+            { id: 3, marca: 'Ford', modelo: 'Fiesta', año: 2018, color: 'Rojo', precio: '$15,000', estado: 'Disponible' },
+            // Agrega más objetos de coche según sea necesario
+        ];
+
+        function renderInventory() {
+            const tableBody = document.getElementById('carsTableBody');
+            tableBody.innerHTML = ''; // Limpia el contenido actual
+
+            inventory.forEach(car => {
+                const row = document.createElement('tr');
+
+                Object.values(car).forEach(value => {
+                    const cell = document.createElement('td');
+                    cell.classList.add('border', 'px-4', 'py-2');
+                    cell.textContent = value;
+                    row.appendChild(cell);
+                });
+
+                tableBody.appendChild(row);
+            });
+        }
+
+        // Renderiza el inventario al cargar la página
+        window.onload = renderInventory;
+    </script>
+</body>
+
+</html>

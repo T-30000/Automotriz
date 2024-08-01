@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Posición del Empleado</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="../../js/asignar.js" defer></script>
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-6">
+    <div class="max-w-lg w-full bg-white shadow-md rounded-lg p-8">
+        <h1 class="text-2xl font-bold mb-6 text-gray-900">Registrar Posición del Empleado</h1>
+        <form action="/registrar-posicion-empleado" method="post" onsubmit="validateForm(event)">
+            <div>
+                <label for="id_empleado" class="block text-sm font-medium text-gray-700">ID del Empleado</label>
+                <input type="number" id="id_empleado" name="id_empleado" required
+                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    placeholder="ID del empleado">
+            </div>
+            <div class="mt-4">
+                <label for="puesto" class="block text-sm font-medium text-gray-700">Puesto</label>
+                <select id="puesto" name="puesto" required
+                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                    <option value="" disabled selected>Selecciona el puesto</option>
+                    <option value="Gerente">Gerente</option>
+                    <option value="Asesor de Ventas">Asesor de Ventas</option>
+                    <option value="Técnico de Servicio">Técnico de Servicio</option>
+                    <option value="Encargado de Repuestos">Encargado de Repuestos</option>
+                    <option value="Recepcionista">Recepcionista</option>
+                    <option value="Vendedor">Vendedor</option>
+                </select>
+            </div>
+            <div class="mt-4">
+                <label for="fecha_contrato" class="block text-sm font-medium text-gray-700">Fecha de Contrato</label>
+                <input type="date" id="fecha_contrato" name="fecha_contrato" value="<?php echo date('Y-m-d'); ?>" 
+                    readonly class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+            </div>
+            <div class="mt-4">
+                <label for="estado" class="block text-sm font-medium text-gray-700">Estado</label>
+                <input type="text" id="estado" name="estado" value="Empleado" readonly
+                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+            </div>
+            <div class="mt-4">
+                <label for="descuentos" class="block text-sm font-medium text-gray-700">Descuentos</label>
+                <input type="number" id="descuentos" name="descuentos" step="0.01"
+                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    placeholder="Descuentos aplicables">
+            </div>
+            <div class="mt-4">
+                <label for="comision" class="block text-sm font-medium text-gray-700">Comisión</label>
+                <input type="number" id="comision" name="comision" step="0.01"
+                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    placeholder="Comisión aplicable">
+            </div>
+            <div class="mt-4">
+                <label for="prestamo" class="block text-sm font-medium text-gray-700">Préstamo</label>
+                <input type="number" id="prestamo" name="prestamo" step="0.01"
+                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    placeholder="Préstamo otorgado">
+            </div>
+            <div class="mt-4">
+                <label for="capacitacion" class="block text-sm font-medium text-gray-700">Nivel de preparación</label>
+                <select id="capacitacion" name="capacitacion" required
+                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                    <option value="" disabled selected>Selecciona el nivel de capacitación</option>
+                    <option value="Excelente">Excelente</option>
+                    <option value="Bueno">Bueno</option>
+                    <option value="Suficiente">Suficiente</option>
+                    <option value="Carente">Carente</option>
+                    <option value="Pésimo">Pésimo</option>
+                </select>
+            </div>
+            <div class="mt-4">
+                <label for="sueldo_base" class="block text-sm font-medium text-gray-700">Sueldo Base</label>
+                <input type="number" id="sueldo_base" name="sueldo_base" step="0.01"
+                    class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                    placeholder="Sueldo base del empleado">
+            </div>
+            <div class="mt-6">
+                <button type="submit"
+                    class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                    Registrar Posición
+                </button>
+            </div>
+        </form>
+    </div>
+    <script src="../../js/asignar.js" defer></script>
+</body>
+
+</html>
